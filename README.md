@@ -97,6 +97,23 @@ npm test
 The test suite uses a small in-memory Supabase test double, so it verifies route
 behavior without creating real accounts or requiring secrets.
 
+## Assignment completion checklist
+
+- [x] Supabase client configured entirely through environment variables
+- [x] Signup returns `201`; missing credentials return `400`
+- [x] Login returns access and refresh tokens; invalid credentials return `401`
+- [x] Public information route requires no authentication
+- [x] Profile and dashboard routes use one reusable bearer-token guard
+- [x] Missing, malformed, tampered, and expired tokens return JSON `401` errors
+- [x] Logout is protected and returns `204`
+- [x] Swagger UI exposes bearer authorization and protected-route padlocks
+- [x] `.env` is ignored and `.env.example` is committed
+- [x] Automated tests pass without secrets
+- [x] Public GitHub repository includes setup, endpoint table, screenshot, and
+      stage checkpoint commits
+- [ ] Final live Supabase flow must be run with the developer's private project
+      URL and anon key; those values must never be committed
+
 ## Security notes
 
 - Passwords are forwarded to Supabase and are never stored or hashed here.
