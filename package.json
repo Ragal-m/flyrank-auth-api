@@ -1,0 +1,23 @@
+{
+  "name": "flyrank-auth-api",
+  "version": "1.0.0",
+  "description": "Secure Express API using Supabase Auth, JWT verification, and Swagger UI.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/server.js",
+    "start": "node --env-file=.env src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.52.0",
+    "express": "^5.1.0",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.1"
+  }
+}
